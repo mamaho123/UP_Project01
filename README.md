@@ -5,6 +5,7 @@ This project use for class UltimatePython. The target of this project is to crea
 
 <!-- ![](img/Login_page.PNG) -->
 <img src="img/Login_page.PNG" width="500">
+<img src="img/pythonAutoInput.gif">
 
 ---
 ## Library
@@ -24,3 +25,26 @@ This project use for class UltimatePython. The target of this project is to crea
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/Register_Page.PNG" width="400">
 
 3. Use `pandas` to read the csv file in folder "Data/inputData.csv" as dataframe. And use `selenium` to find element and fill the data.
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/Folder.PNG" width="250"> <img src="img/Data.PNG" width="250"> <img src="img/Register_Page_Fill.PNG" width="250">
+
+4. If register complete the pop-up message will be show and return back to login page.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/Success_1.PNG" width="400"> <img src="img/Login_page.PNG" width="400">
+
+5. Loop until end of csv file. Finish!
+
+... From the example there are 2 error show when finish precess because...
+1. Password of user 'T0003' is too shot ( only 3 digits but program require 6 digits )  
+2. User 'T0006' already exists in database.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="img/pythonAutoInput.gif" width="250">
+
+---
+## Config setting.json
+
+For the convenience of some user I design to create a setting.json file for user manualy edit some parameter such as ...
+- screen heigh or width of the driver window.
+- the delay of each step (**Please not set too fast or the program will error because driver can not find the element while page is loading**
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/setting.PNG" width="400">
+
