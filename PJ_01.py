@@ -1,5 +1,6 @@
 import os
 import sys
+from tkinter import E
 import pandas as pd
 import time
 import pyautogui
@@ -99,18 +100,25 @@ def main():
 
                 time.sleep(d1)
 
-                resPass = True if driver.find_element(
+                try:
+                    resPass = True if driver.find_element(
                     By.XPATH, '/html/body/div[2]/div/h2').text == 'Register success!' else False
-                driver.find_element(
-                    By.XPATH, '/html/body/div[2]/div/div[6]/button[1]').click()
-
-                if not resPass:
                     driver.find_element(
-                        By.XPATH, '/html/body/div/div/div/div/div[1]/a').click()
+                        By.XPATH, '/html/body/div[2]/div/div[6]/button[1]').click()
+
+                    if not resPass:
+                        driver.find_element(
+                            By.XPATH, '/html/body/div/div/div/div/div[1]/a').click()
+                        print(f'Register Fail : {tr.empNumber}')
+                        errMsg += f'Register Fail at : {i} - {tr.empNumber}\n'
+                    else:
+                        cnt += 1
+                except Exception as e:
+                    driver.find_element(
+                            By.XPATH, '/html/body/div/div/div/div/div[1]/a').click()
                     print(f'Register Fail : {tr.empNumber}')
-                    errMsg += f'Register Fail at : {i} - {tr.empNumber}\n'
-                else:
-                    cnt += 1
+                    errMsg += f'Register Fail at : {i} - {tr.empNumber} >input error\n'
+                
 
                 # print(driver.current_url)
             except:
