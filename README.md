@@ -3,7 +3,8 @@ This project use for class UltimatePython. The target of this project is to crea
 
 ### Because of privacy of network condition so the link of input form in website in the code is in local server so you can't access to that network.
 
-![](img/Login_page.png)
+<!-- ![](img/Login_page.PNG) -->
+<img src="img/Login_page.PNG" width="500">
 
 ---
 ## Library
@@ -13,4 +14,13 @@ This project use for class UltimatePython. The target of this project is to crea
 4. os, sys, json
 
 ---
+## How it work ?
+1. First at the login page there are like to go to register page. Click it!
 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/Login_page.PNG" width="250">
+
+2. In register page there are some textbox to fill.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/Register_Page.PNG" width="400">
+
+3. Use `pandas` to read the csv file in folder "Data/inputData.csv" as dataframe. And use `selenium` to find element and fill the data.
