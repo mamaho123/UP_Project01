@@ -1,0 +1,27 @@
+{
+    "programName": "Python_AutoInput",    
+    "create_by": "Chayut Yam-ngarmlua",
+    "create_date": "2022-03-18",    
+    "update_date": "2022-03-18",    
+    "version": "1.0.0",    
+    "parameter": 
+        {
+            "_comment": "driver select 'ie' or 'chrome' ",
+            "driver":
+                {
+                    "ie":0,   
+                    "chrome":1   
+                },
+            "screen":
+                {
+                    "x": 1280,
+                    "y": 800
+                },
+            "delay":
+                {
+                    "d1": 0.5,
+                    "d2": 0.3,
+                    "d3": 0.2
+                }
+        }
+}
